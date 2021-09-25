@@ -1,5 +1,6 @@
 {
-  "name": "my-app",
+  "name": "goit-react-hw-01-components",
+  "homepage": "https://ilya-zaporjec.github.io/goit-react-hw-01-components/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -17,6 +18,13 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ilya-Zaporjec/goit-react-hw-01-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ilya-Zaporjec/goit-react-hw-01-components/issues"
   },
   "eslintConfig": {
     "extends": [
