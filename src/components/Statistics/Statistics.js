@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import s from './Statistics.module.css';
 
-const Statistics = ({ title, statistics }) => {
+function Statistics({ title, statistics }) {
   const stringId = string => (isNaN(string) ? Number(string.slice(3)) : string);
 
   return (
-    <section className={statistics}>
-      <h2 className={title}>{title}</h2>
+    <div className={s.statistics}>
+      <h2 className={s.title}>{title}</h2>
 
-      <ul className="statlist">
+      <ul className={s.statlist}>
         {statistics.map(item => {
           const rgb =
             'rgb(' +
@@ -18,23 +19,24 @@ const Statistics = ({ title, statistics }) => {
             ',' +
             Math.floor(Math.random() * 256) +
             ')';
+
           return (
             <li
               style={{
                 backgroundColor: rgb,
               }}
-              className="statlist__item"
+              className={s.item}
               key={stringId(item.id)}
             >
-              <span className="label">{item.label}</span>
-              <span className="percentage">{item.percentage} %</span>
+              <span className={s.label}>{item.label} </span>
+              <span className={s.percentage}>{item.percentage} %</span>
             </li>
           );
         })}
       </ul>
-    </section>
+    </div>
   );
-};
+}
 
 Statistics.propTypes = {
   statistics: PropTypes.arrayOf(

@@ -1,0 +1,39 @@
+.friend-list {
+  width: 250px;
+}
+
+.item {
+  padding: 10px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 8px 3px rgb(67, 58, 58);
+}
+
+.status {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-left: 5px;
+  margin-right: 8px;
+}
+
+.statusOffLine {
+  composes: status;
+  background-color: rgb(128, 6, 30);
+}
+.statusOnLine {
+  composes: status;
+  background-color: rgb(94, 181, 8);
+}
+.avatar {
+  margin-right: 10px;
+  border-radius: 5%;
+}
+
+.name {
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,39 @@
+.transaction {
+  width: 400px;
+}
+table,
+td,
+th {
+  border: 1px solid grey;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #fff;
+}
+
+th,
+td {
+  height: 30px;
+}
+
+th {
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #00bcd4;
+}
+td {
+  width: 33.3%;
+  text-align: center;
+  color: #57728c;
+}
+
+.tdtype {
+  padding-left: 5%;
+  text-align: start;
+}
+
+.colorHeading {
+  background-color: #ecf2f3;
+}

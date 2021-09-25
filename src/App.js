@@ -7,11 +7,11 @@ import user from './components/profile/user.json';
 import Statistics from './components/Statistics/Statistics';
 import statisticsData from './components/Statistics/statistical-data.json';
 
-// import FriendList from './friend-list/FriendList';
-// import friends from './friend-list/frieds.json';
+import FriendsList from './components/friends/FriendsList';
+import friends from './components/friends/Friends.json';
 
-// import TransactionHistory from './transaction-history/TransactionHistory';
-// import transactions from './transaction-history/transactions.json';
+import TransactionHistory from './components/transaction/Transaction';
+import transactions from './components/transaction/transactions.json';
 
 export default function App() {
   return (
@@ -26,19 +26,17 @@ export default function App() {
         />
       </Section>
 
-      {
-        <Section title="Statistic">
-          <Statistics title="Upload stats" statistics={statisticsData} />
-        </Section>
+      <Section title="Statistic">
+        <Statistics title="Upload stats" statistics={statisticsData} />
+      </Section>
 
-        // <Section title="FriendsList">
-        //   <FriendList friends={friends} />
-        // </Section>
+      <Section title="FriendsList">
+        <FriendsList friends={friends} />
+      </Section>
 
-        // <Section title="TransactionHistory">
-        //   <TransactionHistory transactions={transactions} />
-        // </Section>
-      }
+      <Section title="TransactionHistory">
+        <TransactionHistory transactions={transactions} />
+      </Section>
     </>
   );
 }
