@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import s from './Statistics.module.css';
 
-function Statistics({ title, statistics }) {
+function Statistics({ title = 'Upload stats', statistics }) {
   const stringId = string => (isNaN(string) ? Number(string.slice(3)) : string);
 
   return (
     <div className={s.statistics}>
-      <h2 className={s.title}>{title}</h2>
+      {title && <h2 className={s.title}>{title}</h2>}
 
       <ul className={s.statlist}>
         {statistics.map(item => {
@@ -39,6 +39,7 @@ function Statistics({ title, statistics }) {
 }
 
 Statistics.propTypes = {
+  title: PropTypes.string,
   statistics: PropTypes.arrayOf(
     PropTypes.shape({
       item: PropTypes.objectOf({
